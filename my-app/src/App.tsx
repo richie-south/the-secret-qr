@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import {useEffect, useReducer} from 'react'
 import Button from 'react-bootstrap/esm/Button'
 import Card from 'react-bootstrap/esm/Card'
 import Container from 'react-bootstrap/esm/Container'
@@ -56,9 +56,14 @@ const qrData = {
   }
 }
 
+function useForceUpdate(): () => void {
+  return useReducer(() => ({}), {})[1] as () => void
+}
+
 export function App() {
   const history = useHistory()
   const query = useQuery()
+  const forceUpdate = useForceUpdate()
 
   const id = query.get('id') as QRCodes | null
   const foundQRCodes = getFoundQrCodes()
@@ -71,6 +76,8 @@ export function App() {
     if (isFirstFind()) {
       setFirstFind()
       history.push('first-match')
+    } else {
+      forceUpdate()
     }
   }, [id, history])
 
