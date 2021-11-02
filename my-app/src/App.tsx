@@ -86,8 +86,8 @@ export function App() {
   }
 
   const handlePlayAgain = () => {
-    resetGame()
     history.go(0)
+    resetGame()
   }
 
   return (
