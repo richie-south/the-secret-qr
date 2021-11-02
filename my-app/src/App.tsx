@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/esm/Card'
 import Container from 'react-bootstrap/esm/Container'
 import Nav from 'react-bootstrap/esm/Nav'
 import Navbar from 'react-bootstrap/esm/Navbar'
-import {Route, Switch, useHistory} from 'react-router'
+import {Route, Switch, useHistory, useLocation} from 'react-router'
 import {Link} from 'react-router-dom'
 import {
   getFoundQrCodes,
@@ -61,6 +61,7 @@ function useForceUpdate(): () => void {
 }
 
 export function App() {
+  const location = useLocation()
   const history = useHistory()
   const query = useQuery()
   const forceUpdate = useForceUpdate()
@@ -86,6 +87,14 @@ export function App() {
   }
 
   const handlePlayAgain = () => {
+    resetGame()
+    const queryParams = new URLSearchParams(location.search)
+    if (queryParams.has('id')) {
+      queryParams.delete('id')
+      history.replace({
+        search: queryParams.toString()
+      })
+    }
     history.go(0)
     resetGame()
   }
