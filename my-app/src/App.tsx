@@ -31,27 +31,27 @@ import Alert from 'react-bootstrap/esm/Alert'
 const qrData = {
   [qrCode0]: {
     title: 'Oo du hittade mig :O',
-    body: 'Så duktigt',
+    body: 'Så duktig.',
     img: qrImage0
   },
   [qrCode1]: {
     title: 'QR = FUN',
-    body: 'Att en liten bild kan betyda så mycket',
+    body: 'Att en liten bild kan betyda så mycket.',
     img: qrImage1
   },
   [qrCode2]: {
-    title: '',
-    body: '',
+    title: 'QR QR på väggen där',
+    body: 'Vem vackraste koden är?',
     img: qrImage2
   },
   [qrCode3]: {
-    title: '',
-    body: '',
+    title: 'QR = LOVE',
+    body: 'När du skannar någon, kommer denne att finnas i ditt hjärta för alltid.',
     img: qrImage3
   },
   [qrCode4]: {
-    title: '',
-    body: '',
+    title: 'QR = VISDOM',
+    body: 'Livet behöver inte vara perfekt så länge man har QR koder.',
     img: qrImage4
   }
 }
@@ -125,7 +125,8 @@ export function App() {
           <Container className="mt-4">
             {foundQRCodes.length === 5 && (
               <Alert variant={'success'}>
-                Grattis du har hittat alla qr koder {'<3'}
+                Grattis du har hittat alla qr koder {'<3'}. Fanns tyvärr inget
+                pris med middag hos mig någon dag?
               </Alert>
             )}
 
