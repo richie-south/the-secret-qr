@@ -4,7 +4,7 @@ _this is a side project and does not reflect my code standard in work environmen
 
 **How to play:**
 
-Hide qr codes in your friends house when no one is looking. Them tell them you hid qr codes all acournd their place and watch them go crazy trying to find them (prerequisites: friends that go crazy for games).
+Hide qr codes in your friends house when no one is looking. Them tell them you hide qr codes all around their place and watch them go crazy trying to find them (prerequisites: friends that go crazy for games).
 
 **UI:**
 
