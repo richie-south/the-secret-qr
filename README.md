@@ -14,5 +14,3 @@ Hide qr codes in your friends house when no one is looking. Them tell them you h
 
 <img src="https://github.com/richie-south/the-secret-qr/blob/main/meta/IMG_2530.jpg" width="360" />
 <img src="https://github.com/richie-south/the-secret-qr/blob/main/meta/IMG_2531.jpg" width="360" />
-
-<img src="https://raw.githubusercontent.com/richie-south/the-secret-qr/main/meta/IMG_2531.jpg?token=GHSAT0AAAAAABLZSMYPVEENVU6LTRRTNQZGYPC7YWA" width="360" />
