@@ -8,7 +8,7 @@ Hide qr codes in your friends house when no one is looking. Them tell them you h
 
 **UI:**
 
-<img src="https://github.com/richie-south/the-secret-qr/blob/main/meta/IMG_2532.jpg" width="360" />
+<img src="https://github.com/richie-south/the-secret-qr/blob/main/meta/IMG_2532.png" width="360" />
 
 **Crazy friends trying to find qr codes:**
 
