@@ -193,7 +193,14 @@ export function App() {
   const id = query.get("id") as QRCodes | null
   const foundQRCodes = getFoundQrCodes()
 
+  const data = new Date()
+  const isHoursBeforeFour = data.getHours() < 17
+
   useEffect(() => {
+    if (isHoursBeforeFour) {
+      return
+    }
+
     if (id !== null && ids.includes(id)) {
       saveFoundQRCode(id)
     }
@@ -210,11 +217,20 @@ export function App() {
     history.push("/")
   }
 
+  if (isHoursBeforeFour) {
+    return (
+      <Container className="mt-4">
+        <p>Spelet är inte öppet ännu, låt QR koden vara</p>
+        <p>Spelet öppnar kl 17:00</p>
+      </Container>
+    )
+  }
+
   return (
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="/">The secret qr</Navbar.Brand>
+          <Navbar.Brand href="/">Skattjakten</Navbar.Brand>
           <Nav className="me-auto">
             <Link className="nav-link" to="/">
               Hem
