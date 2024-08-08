@@ -20,14 +20,13 @@ import {
   saveFoundQRCode
 } from './lib/localstorage-handler'
 import {useQuery} from './lib/use-query'
-import map from './map.jpg'
 import qrImage0 from './qr-677d572f-1392-475a-bd70-491b530f6dfd.png'
 import qrImage1 from './qr-a47a540d-3713-4270-8b00-a5101ee7be07.png'
 import qrImage2 from './qr-cfccb9ab-adab-45f3-9b8c-652815e84fdb.png'
 import qrImage3 from './qr-f1f97ade-f59a-4034-9d28-575d587a124d.png'
 import qrImage4 from './qr-62937f4e-e76d-4a99-8372-175efc548194.png'
 import Alert from 'react-bootstrap/esm/Alert'
-
+ 
 const qrData = {
   [qrCode0]: {
     title: 'Oo du hittade mig :O',
@@ -112,10 +111,6 @@ export function App() {
             <Link className="nav-link" to="/rules">
               Regler
             </Link>
-
-            <Link className="nav-link" to="/map">
-              Karta
-            </Link>
           </Nav>
         </Container>
       </Navbar>
@@ -125,8 +120,7 @@ export function App() {
           <Container className="mt-4">
             {foundQRCodes.length === 5 && (
               <Alert variant={'success'}>
-                Grattis du har hittat alla qr koder {'<3'}. Fanns tyvärr inget
-                pris med middag hos mig någon dag?
+                Grattis du har hittat alla qr koder {'<3'}.
               </Alert>
             )}
 
@@ -164,32 +158,19 @@ export function App() {
             <p>
               Reglerna är enkla.
               <br />
-              Leta efter de 5st gömda QR koder och skanna dom med din mobil
+              Leta efter de gömda QR koder och skanna dom med din mobil
               kamera.
               <br />
               <br />
-              Om du vill få hjälp finns det en <Link to="/map">karta</Link> som
-              visar vilka rum dom är gömda i.
+              Du får ej avlägsna qr koden från sin plats
             </p>
-          </Container>
-        </Route>
-        <Route path="/map">
-          <Container className="mt-4">
-            <img
-              src={map}
-              alt="karta"
-              style={{
-                width: '100%'
-              }}
-            />
-            <p>X marks the room</p>
           </Container>
         </Route>
         <Route path="/first-match">
           <Container className="mt-4">
             <h1>Välkommen till QR spelet!</h1>
             <p>
-              I ditt hem finns det 5st gömda QR koder. Ditt mål är att hitta och
+              I detta hem finns det gömda QR koder. Ditt mål är att hitta och
               skanna alla. Vem vet det kanske finns ett pris?
             </p>
 
