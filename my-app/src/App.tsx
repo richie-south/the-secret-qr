@@ -176,7 +176,7 @@ const qrData = {
 
   [qrCode18]: {
     title: "Trappan",
-    body: "Vilken bra höjd!",
+    body: "Denna QR-kod verkar prata om någon form av ordning. Störst längst ned och minst längst upp. Vad kan det betyda?",
     img: qr099,
   },
 }
